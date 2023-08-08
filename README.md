@@ -22,7 +22,7 @@ from flask import jsonify
 ## 4. Creating the Prediction Function
 Create your prediction function using a name of your choice and any required arguments. This function must return a JSON response using the Flask library's "jsonify" function. Here's an example:
 
-`
+```
 def predict_image(image_path):
     image = preprocess_image(image_path)
     with torch.no_grad():
@@ -30,7 +30,7 @@ def predict_image(image_path):
         output = model(image)
         predicted_class = torch.argmax(output, dim=1).item()
     return jsonify(predicted_class)
-`
+```
 
 ## 5. Initiating Rapid Deployment
 With your script prepared, you can now click the "Rapid Deployment" button in the UI.
